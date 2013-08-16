@@ -8,7 +8,7 @@ require 'json'
 
 $:.unshift File.expand_path('../..',__FILE__)
 require 'geneva'
-CONF='geneva_conf.yml.template'
+CONF='geneva_conf.yml'
 
 set :port, 8090
 
