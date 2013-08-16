@@ -7,7 +7,7 @@ require 'yaml/store'
 require 'ostruct'
 require 'json'
 
-$:.unshift File.expand_path('../lib',__FILE__)
+$:.unshift File.expand_path('../..',__FILE__)
 require 'geneva'
 CONF='geneva_conf.yml'
 
