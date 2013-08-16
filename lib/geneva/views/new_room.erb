@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%= erb :_the_head %>
+  <body>
+
+    <%= erb :_top %>
+
+    <div class="container">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Here is your room!</h1>
+        <p>
+        Simply share the following url and any user clicking to it will automaticaly join your room
+        </p>
+        <p><a class="" href='<%= @url %>'><%= @url %></a></p>
+      </div>
+
+      <%= erb :_footer %>
+      </div>
+
+    </div> <!-- /container -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

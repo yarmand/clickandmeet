@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%= erb :_the_head %>
+  <body>
+
+    <%= erb :_top %>
+
+    <div class="container">
+
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <div class="jumbotron">
+        <h1>Click and Meet!</h1>
+        <p>Create and manage a virtual conference room you can easily share using
+        an url
+        </p>
+        <p><a class="btn btn-primary btn-large" href='new_room'>Create a room &raquo;</a></p>
+      </div>
+
+      <div class="body-content">
+
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-lg-4">
+            <h2>Intelligent sound</h2>
+            <p> Intelligent sound management for best experience (avoid sound loops, 
+            remote and global control of mute/unmute mics and loudspeakers level)</p>
+            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Easy conference management</h2>
+            <p>Manage the conference easliy  (participants allowed to get in,
+  open/close room, ,...)</p>
+            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          </div>
+          <div class="col-lg-4">
+            <h2>Plugins</h2>
+            <p>plug-in on-demand services to the conference (stream to view-only
+  participants, record, subtitles)</p>
+            <p><a class="btn btn-default" href="#">View details &raquo;</a></p>
+          </div>
+        </div>
+
+        <%= erb :_footer %>
+      </div>
+
+    </div> <!-- /container -->
+
+    <script src="js/jquery.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
+</html>
+

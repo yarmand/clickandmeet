@@ -4,7 +4,6 @@ require 'bundler/setup'
 require 'sinatra'
 require 'yaml'
 require 'yaml/store'
-require 'ostruct'
 require 'json'
 
 $:.unshift File.expand_path('../..',__FILE__)
@@ -15,20 +14,22 @@ set :port, 8090
 
 get '/' do
   "store=#{geneva.store}"
+  erb :index
 end
 
 get '/new_room' do
   room = geneva.create_room(params[:title])
-  "skype:#{server_uri}/connect/#{room.id}"
+  @url="skype:#{room.id}?meetandclick&server=#{server_uri}"
+  erb :new_room
 end
 
 get %r{/connect/(.*)} do |token|
   room = geneva.room(token)
   host=conf['default_host']
-  result = OpenStruct.new(
+  result = {
     :uri => "skype:#{host}?call&token=#{room.id}",
-    :room => room
-  )
+    :room => room.to_h.to_json
+  }
   content_type :json
   result.to_json
 end

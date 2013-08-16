@@ -14,5 +14,5 @@ and more...(not implemented)
   remote and global control of mute/unmute mics and loudspeakers level)
 - Manage the conference easliy  (participants allowed to get in,
   open/close room, ,...)
- - plug-in on-demand services to the conference (stream to view-only
+- plug-in on-demand services to the conference (stream to view-only
   participants, record, subtitles)
