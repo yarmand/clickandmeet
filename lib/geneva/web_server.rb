@@ -8,7 +8,7 @@ require 'json'
 
 $:.unshift File.expand_path('../..',__FILE__)
 require 'geneva'
-CONF='geneva_conf.yml'
+CONF='geneva_conf.yml.template'
 
 set :port, 8090
 
@@ -25,7 +25,7 @@ end
 
 get %r{/connect/(.*)} do |token|
   room = geneva.room(token)
-  host=conf['default_host']
+  host=default_host
   result = {
     :uri => "skype:#{host}?call&token=#{room.id}",
     :room => room.to_h.to_json
@@ -41,6 +41,10 @@ end
 
 def conf
   @conf ||=YAML.load_file(CONF)
+end
+
+def default_host
+  ENV['DEFAULT_HOST']
 end
 
 def geneva(store=conf['store'])
