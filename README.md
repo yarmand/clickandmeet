@@ -1,5 +1,7 @@
 ** This is a Skype Garage London Hackathon project **
 
+## Click and meet
+
 Create and manage a virtual conference room you can easily share using
 an url
 
